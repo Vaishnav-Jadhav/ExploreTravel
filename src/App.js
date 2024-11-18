@@ -1,25 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import LandingPage from './components/LandingPage'
+import Section from './components/Section'
+import { useState } from 'react'
+import Footer from './components/Footer'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+function App() 
+{
+
+  const[cardData]=useState([
+    {
+      title:"Tokyo",
+      img:"/assets/japan.jpeg",
+      discription:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi doloribus laudantium odio perspiciatis quas nulla temporibus, est eveniet vel ut, ratione quod saepe? Repellat exercitationem perspiciatis officia sed laudantium aut laborum commodi?"
+    },
+    {
+      title:"Amsterdam",
+      img:"/assets/amsterdam.jpeg",
+      discription:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi doloribus laudantium odio perspiciatis quas nulla temporibus, est eveniet vel ut, ratione quod saepe? Repellat exercitationem perspiciatis officia sed laudantium aut laborum commodi?"
+    },
+    {
+      title:"Barcelona",
+      img:"/assets/barcelona.jpeg",
+      discription:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi doloribus laudantium odio perspiciatis quas nulla temporibus, est eveniet vel ut, ratione quod saepe? Repellat exercitationem perspiciatis officia sed laudantium aut laborum commodi?"
+    },
+    {
+      title:"London",
+      img:"/assets/barcelona.jpeg",
+      discription:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi doloribus laudantium odio perspiciatis quas nulla temporibus, est eveniet vel ut, ratione quod saepe? Repellat exercitationem perspiciatis officia sed laudantium aut laborum commodi?"
+    },
+    {
+      title:"Paris",
+      img:"/assets/paris.jpeg",
+      discription:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi doloribus laudantium odio perspiciatis quas nulla temporibus, est eveniet vel ut, ratione quod saepe? Repellat exercitationem perspiciatis officia sed laudantium aut laborum commodi?"
+    },
+    {
+      title:"Rome",
+      img:"/assets/rome.jpeg",
+      discription:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi doloribus laudantium odio perspiciatis quas nulla temporibus, est eveniet vel ut, ratione quod saepe? Repellat exercitationem perspiciatis officia sed laudantium aut laborum commodi?"
+    }
+   
+  ])
+
+   return(
+    <div>
+      <LandingPage/>
+      <Section data={cardData}/>
+      <Footer/>
     </div>
-  );
+   )
 }
 
-export default App;
+export default App

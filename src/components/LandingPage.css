@@ -1,0 +1,8 @@
+
+.LandingPage{
+    position: relative;
+    background-image: url("/public/assets/traveling-girl.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
